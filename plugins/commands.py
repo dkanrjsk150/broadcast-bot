@@ -49,7 +49,7 @@ async def subscribers_count(bot, m: Message):
 
 
 # ------------------------ Send messages to subs ----------------------------- #
-@Client.on_message(filters.private & filters.command('send'))
+@Client.on_message(filters.private)
 async def send_text(bot, m: Message):
     id = m.from_user.id
     if id not in Config.AUTH_USERS:
